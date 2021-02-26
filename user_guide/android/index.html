@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Synchronization between PostgreSQL">
+        <meta name="description" content="Synchronization between PostgreSQL databases">
       
       
       
@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.3liz.org/qgis-lizsync-plugin/user_guide/android/">
       
       <link rel="shortcut icon" href="../../media/icon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a3f8f96a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#use-your-android-device-as-a-postgresql-server" class="md-skip">
           Skip to content
         </a>
       
@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../concepts/" class="md-tabs__link">
-      Concepts
+      Presentation
     </a>
   </li>
 
@@ -203,11 +203,13 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../../old_french_documentation/" class="md-tabs__link">
-      French doc
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Android
     </a>
   </li>
 
@@ -268,6 +270,18 @@
   <li class="md-tabs__item">
     <a href="../../database/" class="md-tabs__link">
       Database
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../old_french_documentation/" class="md-tabs__link">
+      French doc
     </a>
   </li>
 
@@ -356,7 +370,7 @@
   
     <li class="md-nav__item">
       <a href="../../concepts/" class="md-nav__link">
-        Concepts
+        Presentation
       </a>
     </li>
   
@@ -368,11 +382,83 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../old_french_documentation/" class="md-nav__link">
-        French doc
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Android
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#termux-application" class="md-nav__link">
+    Termux application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-and-configure-postgresql-on-termux" class="md-nav__link">
+    Install and configure PostgreSQL on Termux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-between-your-computer-and-your-android-device" class="md-nav__link">
+    Connection between your computer and your Android device
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection between your computer and your Android device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wifi-connection" class="md-nav__link">
+    WIFI connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-connection" class="md-nav__link">
+    USB connection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -452,6 +538,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old_french_documentation/" class="md-nav__link">
+        French doc
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -467,6 +568,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -475,45 +578,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#termux-application" class="md-nav__link">
+    Termux application
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-and-configuration" class="md-nav__link">
-    Installation and configuration
+  <a href="#install-and-configure-postgresql-on-termux" class="md-nav__link">
+    Install and configure PostgreSQL on Termux
   </a>
-  
-    <nav class="md-nav" aria-label="Installation and configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#userland" class="md-nav__link">
-    UserLand
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#termux" class="md-nav__link">
-    Termux
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connection-between-your-computer-and-android" class="md-nav__link">
-    Connection between your computer and Android
+  <a href="#connection-between-your-computer-and-your-android-device" class="md-nav__link">
+    Connection between your computer and your Android device
   </a>
   
-    <nav class="md-nav" aria-label="Connection between your computer and Android">
+    <nav class="md-nav" aria-label="Connection between your computer and your Android device">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -526,13 +609,6 @@
           <li class="md-nav__item">
   <a href="#usb-connection" class="md-nav__link">
     USB connection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#termux_1" class="md-nav__link">
-    Termux
   </a>
   
 </li>
@@ -559,26 +635,21 @@
                   </a>
                 
                 
-                  <h1>Android</h1>
-                
-                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
-<p>There is two way to use PostgreSQL on Android, with two different apps:</p>
-<ul>
-<li>UserLand: <a href="https://userland.tech/">https://userland.tech/</a></li>
-<li>Termux: <a href="https://termux.com/">https://termux.com/</a></li>
-</ul>
-<h2 id="installation-and-configuration">Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permanent link">#</a></h2>
-<h3 id="userland">UserLand<a class="headerlink" href="#userland" title="Permanent link">#</a></h3>
-<p>todo</p>
-<h3 id="termux">Termux<a class="headerlink" href="#termux" title="Permanent link">#</a></h3>
-<p>A full script has been developped to ease the installation and use of PostgreSQL and PostGIS in Termux. See: <a href="https://github.com/mdouchin/termux-postgis-script/">https://github.com/mdouchin/termux-postgis-script/</a></p>
-<h2 id="connection-between-your-computer-and-android">Connection between your computer and Android<a class="headerlink" href="#connection-between-your-computer-and-android" title="Permanent link">#</a></h2>
+                <h1 id="use-your-android-device-as-a-postgresql-server">Use your Android device as a PostgreSQL server<a class="headerlink" href="#use-your-android-device-as-a-postgresql-server" title="Permanent link">#</a></h1>
+<h2 id="termux-application">Termux application<a class="headerlink" href="#termux-application" title="Permanent link">#</a></h2>
+<p><a href="https://termux.com/">Termux</a> is an <strong>Android terminal emulator</strong> and Linux environment app that allows to install Linux softwares on your device. You can use this tool to install a PostgreSQL server inside your Android device, and use it to hold a LisSync <strong>clone database</strong>.</p>
+<p>For more information on Termux, please read the <a href="https://wiki.termux.com/wiki/Main_Page">Termux Wiki</a>.</p>
+<h2 id="install-and-configure-postgresql-on-termux">Install and configure PostgreSQL on Termux<a class="headerlink" href="#install-and-configure-postgresql-on-termux" title="Permanent link">#</a></h2>
+<p>A full <strong>set of scripts</strong> has been developed to ease the installation, configuration and use of <strong>PostgreSQL and PostGIS</strong> in Termux. See <a href="https://github.com/mdouchin/termux-postgis-script/">the README file</a> for a detailed how-to.</p>
+<p>Once you have successfully installed this set of scripts, you can use your Android tablet or smartphone as a <strong>PostgreSQL clone database server</strong>.</p>
+<h2 id="connection-between-your-computer-and-your-android-device">Connection between your computer and your Android device<a class="headerlink" href="#connection-between-your-computer-and-your-android-device" title="Permanent link">#</a></h2>
 <h3 id="wifi-connection">WIFI connection<a class="headerlink" href="#wifi-connection" title="Permanent link">#</a></h3>
-<p>You just need to connect to the same WIFI hotspot from your computer and from your Android device. Then, each one will have an IP address, and you will able to connect from your computer to your Android PostgreSQL server.</p>
+<p>You just need to connect to the <strong>same WIFI hotspot</strong> from your computer and from your Android device. Then, each one will have an <strong>IP address</strong> in the same network, and you will able to connect from your computer to your Android PostgreSQL server.</p>
 <p>Inside Termux, you can follow this guideline: <a href="https://github.com/mdouchin/termux-postgis-script/#use-postgresql">https://github.com/mdouchin/termux-postgis-script/#use-postgresql</a></p>
-<p>The WIFI connection can sometimes be unstable, which could cause issues when transfering a large amount of data. You can use USB connection instead.</p>
+<p>!!! tip
+    The WIFI connection can sometimes be unstable, which could cause issues when transfering a large amount of data. You can use USB connection instead. See below.</p>
 <h3 id="usb-connection">USB connection<a class="headerlink" href="#usb-connection" title="Permanent link">#</a></h3>
-<p>You can <strong>speed up</strong> the data transfer and have a more stable connection between your computer and your Android device by using the USB cable to create a network and share the Android device WIFI or 3/4/5G connection with your computer. Depending on your Android version, the steps should roughly be:</p>
+<p>You can <strong>speed up the data transfer</strong> and have a <strong>more stable connection</strong> between your computer and your Android device by using the USB cable to create a network and share the Android device WIFI or 3/4/5G connection with your computer. Depending on your Android version, the steps should roughly be:</p>
 <ul>
 <li>Stops the WIFI or wired internet connection on your computer</li>
 <li>Start the WIFI or 3/4/5G connection on your Android device. Make sure your internet connection is working before going on.</li>
@@ -586,10 +657,9 @@
 <li>Do not use the "File sharing mode" (do not accept it if a message asking to allow it prompts)</li>
 <li>Go to Android preferences, connections, and activate "USB tethering/modem"</li>
 <li>The connection is active: your computer should be able to use the device internet connection. Try by testing a website inside your computer browser.</li>
-<li>You now need to figure out the IP addresses of your computer and your Android device for this local network. They should share the same beginning. For example, in your Android shell, type <code>ip add</code> and look for an IP beginning with <code>192.168.</code>. For example <code>192.168.42.184</code>. In your computer, you should be able to get your IP address form the internet connection manager, for example by clicking "Details" on you connection name.</li>
-<li>Use these IP to connect from your computer to your Android PostgreSQL database.</li>
+<li>You now need to figure out the IP addresses of your computer and your Android device for this local network. They should share the same beginning. For example, in your Android shell, type <code>ip add</code> and look for an IP beginning with <code>192.168.</code>. For example <code>192.168.42.184</code>. In your computer, you should be able to get your IP address form the internet connection manager, for example by clicking "Details" on you connection name. You can also use a <strong>shell</strong> or <strong>command prompt</strong> to know the IP address of your computer in the newly created network. Use <code>ipconfig</code> in Windows, and <code>ifconfig</code> or <code>ip ad</code> in your Linux terminal.</li>
+<li><strong>Use the Android Termux IP</strong> to connect from your computer to your Android PostgreSQL database.</li>
 </ul>
-<h3 id="termux_1">Termux<a class="headerlink" href="#termux_1" title="Permanent link">#</a></h3>
                 
               
               
@@ -604,6 +674,39 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../concepts/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Presentation
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../processing/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Processing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -667,10 +770,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.217ffd95.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.926459b3.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
       
